@@ -11,30 +11,30 @@ I am especially interested in the engineering questions behind intelligent syste
 ### [Mr Robot](https://github.com/7clan/mr-robot)
 **Local AI assistant and developer environment** · TypeScript · Next.js · WebLLM · WebGPU · Prisma
 
-- Runs open-source LLMs in-browser through WebLLM/WebGPU.
-- Includes hand-built educational NLP/ML components such as a BPE tokenizer, classifier, neural-network code, and a transformer-style implementation.
-- Adds grounded generation from retrieved web context, inline source citations, follow-up reference resolution, and developer tooling.
-- Includes training-data export workflows and local-first model experimentation.
+- Runs pretrained language models in-browser through WebLLM/WebGPU.
+- Includes hand-built educational NLP/ML components such as a BPE tokenizer, classifier, neural-network code, and a compact transformer-style implementation.
+- Adds grounded generation from retrieved web context, inline source references, follow-up reference resolution, and developer tooling.
+- Includes correction/training-data export workflows and local-first model experimentation.
 
 ### [Money Machine](https://github.com/7clan/Money-Machine)
 **Autonomous content-production agent** · TypeScript · Next.js · Prisma · Remotion
 
 - Implements an end-to-end agent loop for niche research, strategy, topic research, scripting, media production, quality review, publishing, and analytics.
-- Uses explicit operating modes, an emergency stop, publishing safety gates, audit logging, and durable artifact tracking.
+- Uses explicit operating modes, an emergency stop, publishing safety gates, audit logging, and artifact tracking.
 - Treats analytics as feedback for subsequent decisions rather than a separate dashboard-only feature.
 
 ### MediVault — in progress
 **Privacy-conscious clinical document system** · private core repository · public [macOS CI mirror](https://github.com/7clan/medivault-ci-public)
 
-- Built around patient/document workflows, local service architecture, authentication/device controls, encrypted document storage, backup/restore, and deployment validation.
-- Originally developed around Windows deployment, then adapted toward macOS after the target user's actual environment became clear.
-- The macOS work includes provisioning, launch/persistence behavior, CI validation, readiness checks, backup/restore proofs, and platform-specific packaging work.
+- Combines a local application/service stack with database provisioning, health/readiness checks, packaging, lifecycle validation, and platform-specific deployment work.
+- Windows deployment work was preserved and frozen when the actual target physician environment was identified as macOS; development then moved to a dedicated macOS platform lane.
+- The macOS lane validates separate arm64/x86_64 builds, application/DMG packaging, local-only networking defaults, database/API lifecycle behavior, and explicit acceptance contracts that distinguish proven from still-interactive requirements.
 
 ### [Employee Management System + RAG](https://github.com/7clan/integrated-employee-management-system)
 **Local document-grounded assistant** · Laravel · PostgreSQL/pgvector · Ollama
 
-- Extends an employee-management application with a local RAG pipeline.
-- Parses policy documents, chunks and embeds them with Ollama, stores vectors in PostgreSQL/pgvector, retrieves relevant passages, and answers from retrieved context.
+- Extends an employee-management application with a local RAG pipeline developed independently after earlier professional exposure to semantic document search.
+- Parses policy PDFs into chunks, embeds them with Ollama, stores vectors in PostgreSQL/pgvector, retrieves relevant passages, and answers from retrieved context.
 - Uses a similarity threshold and source metadata so the assistant can refuse unsupported answers rather than inventing policy information.
 
 ### [Trio AI Convo](https://github.com/7clan/Trio-AI-Convo)
@@ -59,6 +59,10 @@ During a six-month software-development internship, I worked on Django/Laravel b
 - Backend and distributed application architecture
 - Privacy-conscious health and document systems
 - Deployment, CI, observability, and reliability
+
+## Development approach
+
+Several recent projects use AI-assisted development tools as implementation accelerators. I use them to move faster on implementation while retaining responsibility for requirements, architecture, debugging, validation, integration, and deciding what the system should actually do. Project documentation distinguishes those engineering contributions from claims of manually typing every source line.
 
 ## Links
 
