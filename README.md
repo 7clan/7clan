@@ -27,19 +27,19 @@ I build systems that combine practical software engineering with deeper question
 - Preserved and froze the Windows deployment path after the real target environment was identified as macOS, then qualified separate arm64/x86_64 macOS paths.
 - Documents what CI proves separately from what still requires interactive user/device validation.
 
-### [Mr Robot](https://github.com/7clan/mr-robot)
-**Local AI assistant & developer environment** · TypeScript · Next.js · WebLLM · WebGPU · Prisma
-
-- Runs pretrained language models in-browser through WebLLM/WebGPU.
-- Includes educational implementations of tokenization, classification, neural-network code, and a compact transformer-style model.
-- Adds grounded generation from retrieved web context, source references, follow-up resolution, and developer tooling.
-
 ### [Employee Management System + RAG](https://github.com/7clan/integrated-employee-management-system)
 **Local document-grounded assistant** · Laravel · PostgreSQL/pgvector · Ollama
 
 - Parses policy PDFs, chunks and embeds them locally, stores vectors in pgvector, retrieves relevant passages, and answers from retrieved context.
 - Uses similarity gating and source metadata so unsupported questions can be refused rather than answered from guesswork.
 - The RAG extension was developed independently after earlier professional exposure to semantic document search.
+
+### [Mr Robot](https://github.com/7clan/mr-robot)
+**Local AI assistant & developer environment** · TypeScript · Next.js · WebLLM · WebGPU · Prisma
+
+- Runs pretrained language models in-browser through WebLLM/WebGPU.
+- Includes educational implementations of tokenization, classification, neural-network code, and a compact transformer-style model.
+- Adds grounded generation from retrieved web context, source references, follow-up resolution, and developer tooling.
 
 ### [OfflineBoard](https://github.com/7clan/offlineboard-flutter)
 **Offline-first Flutter project/task manager** · Flutter · Riverpod · Drift/SQLite · Dio
