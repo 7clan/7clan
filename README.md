@@ -55,6 +55,20 @@ I build systems that combine practical software engineering with deeper question
 - MarketFlow covers marketplace/cart/checkout/order flows; CareRoute covers provider discovery, favorites, scheduling, and appointment requests.
 - Both exercise the real client networking pipeline against deterministic local backends so error, timeout, cancellation, and validation paths can be tested reproducibly.
 
+### [Lumiere Beauty Clinic](https://github.com/7clan/Lumiere-Beauty-Clinic)
+**Full-stack clinic booking system** · React · TypeScript · Express · PostgreSQL/Prisma
+
+- Implements customer and admin workflows, appointment booking, service management, availability, authentication, and account management.
+- Uses HTTP-only JWT cookies, CSRF protection, bcrypt password hashing, rate limiting, validation, and role-based access control.
+- Includes GitHub Actions for type checking, linting, automated validation tests, and full client/server builds.
+
+### [Rent Django Project](https://github.com/7clan/rent-django-project)
+**Python/Django rental-management backend** · Django · DRF · SimpleJWT · SQLite
+
+- Models floors, apartments, renters, yearly rents, and payment history with business rules around occupancy and move-outs.
+- Exposes authenticated REST endpoints through Django REST Framework.
+- Includes Django tests for partial payments, balances, renter occupancy, move-out behavior, and rent calculations.
+
 ### [Money Machine](https://github.com/7clan/Money-Machine) & [Trio AI Convo](https://github.com/7clan/Trio-AI-Convo)
 **Agentic and multi-model orchestration experiments**
 
