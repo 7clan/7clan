@@ -4,6 +4,12 @@
 
 I build systems that combine practical software engineering with deeper questions around **information retrieval, grounded AI, local/private inference, agentic workflows, offline-first architecture, and reliability**. My recent work ranges from RAG and browser-run LLM experiments to privacy-conscious desktop software, production-style Flutter apps, and an experimental connectome-derived Drosophila simulation.
 
+## Background
+
+- **Computer Science graduate** — Diplôme National de Licence, CNAM Paris / CNAM Liban (2025)
+- **Software Developer Intern, Programi Tech** (Jun-Nov 2025) — Django/Laravel backends, PostgreSQL-backed APIs, OpenAPI/Swagger, Git/code review, and a locally hosted semantic-search assistant
+- **Freelance full-stack development** — web applications, APIs, authentication, deployment, and maintenance
+
 ## Featured work
 
 ### [DigitalFlyLab](https://github.com/7clan/Fruit-fly-experiment-)
