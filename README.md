@@ -1,68 +1,81 @@
 # Mohammad Farhat
 
-Backend-focused full-stack developer building **AI-integrated, local-first, and privacy-conscious systems**.
+**Backend-focused full-stack developer working across AI systems, local-first software, and Flutter/mobile engineering.**
 
-My work started with practical backend engineering—APIs, databases, authentication, deployment, and production web applications—and has increasingly moved toward **retrieval-augmented generation, local language models, grounded AI, multi-model orchestration, autonomous agents, and reliable desktop/backend systems**.
+I build systems that combine practical software engineering with deeper questions around **information retrieval, grounded AI, local/private inference, agentic workflows, offline-first architecture, and reliability**. My recent work ranges from RAG and browser-run LLM experiments to privacy-conscious desktop software, production-style Flutter apps, and an experimental connectome-derived Drosophila simulation.
 
-I am especially interested in the engineering questions behind intelligent systems: how to ground model outputs in evidence, keep sensitive data local, build useful agent workflows, and make AI-enabled software reliable enough for real users.
+## Featured work
 
-## Selected work
+### [DigitalFlyLab](https://github.com/7clan/Fruit-fly-experiment-)
+**Experimental connectome-derived Drosophila simulation & closed-loop control** · Python · neuroscience models · reproducible experiments
+
+- Uses a pinned whole-brain Drosophila model built on the FlyWire connectome rather than an ordinary neural network labeled as a fruit-fly brain.
+- Reproduces neural activity, sensory-to-motor pathways, and closed-loop target/escape control with explicit control conditions.
+- Uses pre-registered gates and keeps failed learning experiments recorded instead of tuning them away.
+- Current applied work is explicitly hybrid: biological/connectome-derived computation is separated from engineered perception, memory, planning, and control components.
+
+### MediVault — private core / [public CI mirror](https://github.com/7clan/medivault-ci-public)
+**Privacy-conscious clinical document system** · Next.js · Fastify · PostgreSQL/Prisma · Tauri
+
+- Local-first application/service architecture with database provisioning, health/readiness checks, packaging, lifecycle validation, and recovery-oriented testing.
+- Preserved and froze the Windows deployment path after the real target environment was identified as macOS, then qualified separate arm64/x86_64 macOS paths.
+- Documents what CI proves separately from what still requires interactive user/device validation.
 
 ### [Mr Robot](https://github.com/7clan/mr-robot)
-**Local AI assistant and developer environment** · TypeScript · Next.js · WebLLM · WebGPU · Prisma
+**Local AI assistant & developer environment** · TypeScript · Next.js · WebLLM · WebGPU · Prisma
 
 - Runs pretrained language models in-browser through WebLLM/WebGPU.
-- Includes hand-built educational NLP/ML components such as a BPE tokenizer, classifier, neural-network code, and a compact transformer-style implementation.
-- Adds grounded generation from retrieved web context, inline source references, follow-up reference resolution, and developer tooling.
-- Includes correction/training-data export workflows and local-first model experimentation.
-
-### [Money Machine](https://github.com/7clan/Money-Machine)
-**Autonomous content-production agent** · TypeScript · Next.js · Prisma · Remotion
-
-- Implements an end-to-end agent loop for niche research, strategy, topic research, scripting, media production, quality review, publishing, and analytics.
-- Uses explicit operating modes, an emergency stop, publishing safety gates, audit logging, and artifact tracking.
-- Treats analytics as feedback for subsequent decisions rather than a separate dashboard-only feature.
-
-### MediVault — in progress
-**Privacy-conscious clinical document system** · private core repository · public [macOS CI mirror](https://github.com/7clan/medivault-ci-public)
-
-- Combines a local application/service stack with database provisioning, health/readiness checks, packaging, lifecycle validation, and platform-specific deployment work.
-- Windows deployment work was preserved and frozen when the actual target physician environment was identified as macOS; development then moved to a dedicated macOS platform lane.
-- The macOS lane validates separate arm64/x86_64 builds, application/DMG packaging, local-only networking defaults, database/API lifecycle behavior, and explicit acceptance contracts that distinguish proven from still-interactive requirements.
+- Includes educational implementations of tokenization, classification, neural-network code, and a compact transformer-style model.
+- Adds grounded generation from retrieved web context, source references, follow-up resolution, and developer tooling.
 
 ### [Employee Management System + RAG](https://github.com/7clan/integrated-employee-management-system)
 **Local document-grounded assistant** · Laravel · PostgreSQL/pgvector · Ollama
 
-- Extends an employee-management application with a local RAG pipeline developed independently after earlier professional exposure to semantic document search.
-- Parses policy PDFs into chunks, embeds them with Ollama, stores vectors in PostgreSQL/pgvector, retrieves relevant passages, and answers from retrieved context.
-- Uses a similarity threshold and source metadata so the assistant can refuse unsupported answers rather than inventing policy information.
+- Parses policy PDFs, chunks and embeds them locally, stores vectors in pgvector, retrieves relevant passages, and answers from retrieved context.
+- Uses similarity gating and source metadata so unsupported questions can be refused rather than answered from guesswork.
+- The RAG extension was developed independently after earlier professional exposure to semantic document search.
 
-### [Trio AI Convo](https://github.com/7clan/Trio-AI-Convo)
-**Three-model collaborative chat system** · React · TypeScript · Node.js · Ollama
+### [OfflineBoard](https://github.com/7clan/offlineboard-flutter)
+**Offline-first Flutter project/task manager** · Flutter · Riverpod · Drift/SQLite · Dio
 
-- Orchestrates three configurable AI participants across cloud/local model hosts.
-- Supports repeated deliberation rounds in which each model receives the evolving conversation history.
-- Adds search/fetch tools, provider fallbacks, tool traces, timeouts, retry/error handling, and cancellation.
+- Local database is the source of truth; writes work without connectivity and are delivered later through a durable mutation queue.
+- Implements retry/backoff, conflict resolution, tombstones, idempotency, visible sync state, and deterministic test seams.
+- CI runs formatting, static analysis, and tests on each push.
 
-## Software engineering work
+### [MarketFlow](https://github.com/7clan/marketflow-mobile) & [CareRoute](https://github.com/7clan/careroute-mobile)
+**Production-style Flutter portfolio apps** · Flutter · Riverpod · Dio · secure/local persistence
 
-I also build conventional production-oriented applications with **Python/Django, PHP/Laravel, Node.js, React, PostgreSQL, REST APIs, JWT/RBAC, Docker, Linux, Git, and CI/deployment tooling**.
+- Built to demonstrate layered mobile architecture, typed networking/error handling, state management, accessibility, testing, and CI.
+- MarketFlow covers marketplace/cart/checkout/order flows; CareRoute covers provider discovery, favorites, scheduling, and appointment requests.
+- Both exercise the real client networking pipeline against deterministic local backends so error, timeout, cancellation, and validation paths can be tested reproducibly.
 
-During a six-month software-development internship, I worked on Django/Laravel backends, PostgreSQL-backed APIs, an Ollama-powered internal semantic-search assistant, OpenAPI/Swagger documentation, and collaborative Git/code-review workflows.
+### [Money Machine](https://github.com/7clan/Money-Machine) & [Trio AI Convo](https://github.com/7clan/Trio-AI-Convo)
+**Agentic and multi-model orchestration experiments**
 
-## Current technical interests
+- Money Machine explores autonomous research-to-production workflows with operating modes, safety gates, audit logging, durable artifacts, and analytics feedback.
+- Trio coordinates three configurable model participants with shared context, search/fetch tools, provider fallbacks, retries, traces, and cancellation.
 
-- Retrieval-augmented generation and information retrieval
+## Engineering stack
+
+**Backend:** Python, PHP, Django, Laravel, Node.js, Fastify, REST APIs  
+**Data:** PostgreSQL, SQLite, Prisma, pgvector, Drift  
+**Frontend/mobile:** TypeScript, React, Next.js, Flutter/Dart  
+**AI:** Ollama, WebLLM/WebGPU, RAG, embeddings, grounded generation, model/tool orchestration  
+**Engineering:** Git/GitHub, GitHub Actions, Docker, Linux, OpenAPI/Swagger, testing, CI/CD, Tauri
+
+## Current interests
+
+- Information retrieval and retrieval-augmented generation
 - Grounded and reliable LLM systems
 - Local/private AI
-- Agentic software systems and tool use
-- Backend and distributed application architecture
-- Privacy-conscious health and document systems
-- Deployment, CI, observability, and reliability
+- Agentic software and tool use
+- Offline-first and distributed application architecture
+- Privacy-conscious health/document systems
+- CI, deployment, reproducibility, and reliability
 
 ## Development approach
 
-Several recent projects use AI-assisted development tools as implementation accelerators. I use them to move faster on implementation while retaining responsibility for requirements, architecture, debugging, validation, integration, and deciding what the system should actually do. Project documentation distinguishes those engineering contributions from claims of manually typing every source line.
+Some recent projects use AI-assisted development tools as implementation accelerators. I retain responsibility for requirements, architecture, debugging, validation, integration, and deciding what the system should do. The project documentation distinguishes those engineering contributions from claims of manually typing every source line.
 
 ## Links
 
